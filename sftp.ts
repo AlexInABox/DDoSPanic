@@ -7,8 +7,8 @@ const sftp = new SFTPClient();
 
 // Hardcoded list of Docker container IDs
 const dockerContainerIds = [
-    "dbf6f8d0226c",
-    "17a776861b36",
+    "2a763cc5-ec26-4a34-9673-685256138b1d",
+    "7c4f034e-5d12-48ca-8e8a-134195a084db",
 ];
 
 const targetFiles = [
