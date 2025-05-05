@@ -1,0 +1,25 @@
+{
+  "name": "ddospanic",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "run": "npx tsc && node dist/index.js",
+    "build": "npx tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ec2": "^3.800.0",
+    "@aws-sdk/credential-provider-ini": "^3.799.0",
+    "axios": "^1.9.0",
+    "cloudflare": "^4.2.0",
+    "dotenv": "^16.5.0",
+    "ssh2-sftp-client": "^12.0.0"
+  }
+}

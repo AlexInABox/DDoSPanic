@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "ESNext",
+        "moduleResolution": "node10",
+        "allowSyntheticDefaultImports": true,
+        "outDir": "./dist"
+    },
+    "files": [
+        "./index.ts",
+        "./cloudflare.ts",
+        "./ec2.ts",
+        "./sftp.ts",
+    ],
+}
