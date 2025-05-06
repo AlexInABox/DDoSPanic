@@ -1,15 +1,12 @@
 {
+    "extends": "@tsconfig/node20/tsconfig.json",
     "compilerOptions": {
-        "module": "esnext",
-        "target": "ESNext",
-        "moduleResolution": "node10",
-        "allowSyntheticDefaultImports": true,
         "outDir": "./dist"
     },
-    "files": [
+    "include": [
         "./index.ts",
         "./cloudflare.ts",
         "./ec2.ts",
-        "./sftp.ts",
-    ],
+        "./sftp.ts"
+    ]
 }

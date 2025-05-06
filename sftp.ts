@@ -60,14 +60,14 @@ export const replaceIPInFiles = async (newIp: string) => {
                         return;
                     }
 
-                    stream.on('close', (code, signal) => {
+                    stream.on('close', (code: number, signal: any) => {
                         if (code === 0) {
                             console.log(`Successfully restarted container ${containerId}`);
                         } else {
                             console.warn(`Container restart failed with exit code ${code}`);
                         }
                         sshClient.end();
-                    }).on('data', (data) => {
+                    }).on('data', (data: any) => {
                         console.log(`stdout: ${data}`);
                     }).stderr.on('data', (data) => {
                         console.warn(`stderr: ${data}`);

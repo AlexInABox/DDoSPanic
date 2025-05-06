@@ -4,10 +4,11 @@ config();
 
 const cf = new Cloudflare({ apiKey: process.env.CLOUDFLARE_API_KEY!, apiEmail: process.env.CLOUDFLARE_API_EMAIL! });
 
-export const getOldIpFromCloudflare = async (zoneId: string, domain: string): Promise<string | undefined> => {
+export const getOldIpFromCloudflare = async (zoneId: string, domain: string): Promise<string> => {
     const records = await cf.dns.records.list({ zone_id: zoneId });
     const record = records.result.find((r: any) => r.name === domain && r.type === "A");
-    if (!record) throw new Error(`No A record found for ${domain}`);
+    if (!record || !record.content) throw new Error(`No A record found for ${domain}`);
+
     console.log(`Old IP from Cloudflare: ${record.content}`);
     return record.content;
 };
